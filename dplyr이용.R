@@ -92,7 +92,7 @@ lapply(corpus.docs, content)
 
 install.packages("SnowballC")
 library(SnowballC)
-corpus.docs <- tm_map(corpus.docs, stemDocument) # ��� ����
+corpus.docs <- tm_map(corpus.docs, stemDocument)
 lapply(corpus.docs, content)
 
 
@@ -185,7 +185,7 @@ corpus.docs <- tm_map(corpus.docs, removePunctuation)
 corpus.docs <- tm_map(corpus.docs, removeNumbers)
 corpus.docs <- tm_map(corpus.docs, stripWhitespace)
 corpus.docs <- tm_map(corpus.docs, content_transformer(trimws))
-corpus.docs <- tm_map(corpus.docs, stemDocument) # ��� ����
+corpus.docs <- tm_map(corpus.docs, stemDocument)
 corpus.docs <- tm_map(corpus.docs, content_transformer(gsub), pattern="economist", replacement="economi")
 
 corpus.docs
